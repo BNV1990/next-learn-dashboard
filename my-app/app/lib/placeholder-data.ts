@@ -28,7 +28,12 @@ const customers = [
     email: "lee@robinson.com",
     image_url: "/customers/lee-robinson.png",
   },
-
+  {
+    id: "76d65c26-f784-44a2-ac19-586678f7c2f2",
+    name: "Michael Novotny",
+    email: "michael@novotny.com",
+    image_url: "/customers/michael-novotny.png",
+  },
   {
     id: "CC27C14A-0ACF-4F4A-A6C9-D45682C144B9",
     name: "Amy Burns",
