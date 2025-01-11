@@ -1,6 +1,5 @@
-"use client"; // Вказуємо, що компонент виконується на стороні клієнта
+"use client";
 
-// Імпортуємо необхідні залежності
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline"; // Іконки стрілок
 import clsx from "clsx"; // Утиліта для умовного застосування класів
 import Link from "next/link"; // Компонент посилання в Next.js
@@ -11,6 +10,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   const pathname = usePathname(); // Отримуємо поточний шлях
   const searchParams = useSearchParams(); // Отримуємо поточні параметри пошуку
   const currentPage = Number(searchParams.get("page")) || 1; // Поточна сторінка, за замовчуванням 1
+  console.log(currentPage);
 
   // Функція створення URL для певної сторінки
   const createPageURL = (pageNumber: number | string) => {
@@ -21,7 +21,6 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
   // Генеруємо масив сторінок для відображення у пагінації
   const allPages = generatePagination(currentPage, totalPages);
-  console.log(allPages);
 
   return (
     <>
